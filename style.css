@@ -8,6 +8,7 @@ body {
     height: 100vh;
     background-color: #000;
     display: flex;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
 }
@@ -31,4 +32,45 @@ body {
     align-items:center;
 
     font-size: 3rem;
+}
+
+.winner {
+    transition: all .5s;
+    animation: win 0.8s infinite;
+}
+
+.buttons-controls {
+    margin-top: 50px;
+    width: 40%;
+    display: flex;
+    justify-content:space-between;
+    /* background-color: #fff; */
+}
+
+button {
+    cursor: pointer;
+    width: 40%;
+    padding: 20px 30px;
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+
+    transition: all .4s;
+    border-radius: 8px;
+    
+}
+
+button:hover {
+    /* border: 1px solid #fff; */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+@keyframes win {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1
+    }
 }
